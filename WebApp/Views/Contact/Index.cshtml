@@ -1,0 +1,31 @@
+﻿@model ContactViewModel
+
+
+<partial name="~/Views/Shared/Partials/_HeaderPartial.cshtml" />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53542.791584592014!2d17.945400263947704!3d59.38563435472737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9c450e88d76b%3A0xada4270f05dfa8de!2sDanderyds%20sjukhus!5e0!3m2!1ssv!2sse!4v1681903774195!5m2!1ssv!2sse" height="350" style="border:0;" class="embed-responsive-item w-100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-center">
+        <form method="post" class="col-6" novalidate>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Comment" class="form-label"></label>
+                <input asp-for="Comment" class="form-control" />
+            </div>
+
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn-theme">Skicka</button>
+            </div>
+        </form>
+    </div>
+</div>

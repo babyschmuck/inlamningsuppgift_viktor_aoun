@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CollectionItemModel>
+
+
+<section class="collection-grid">
+    <div class="container">
+        <div class="title">@ViewData["Title"]</div>
+        <div class="item-collection">
+            @foreach (var item in Model)
+            {
+                <partial name="~/Views/Shared/Partials/_CollectionItemPartial.cshtml" model="item" />
+            }
+            @*<partial name="_CollectionItemPartial" model="Model.collectionList" />
+            <partial name="_CollectionItemPartial" />
+            <partial name="_CollectionItemPartial" />
+            <partial name="_CollectionItemPartial" />
+            <partial name="_CollectionItemPartial" />
+            <partial name="_CollectionItemPartial" />*@
+        </div>
+    </div>
+</section>

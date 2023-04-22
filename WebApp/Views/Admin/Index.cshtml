@@ -1,0 +1,60 @@
+﻿@model AdminViewModel
+<partial name="~/Views/Shared/Partials/_HeaderPartial.cshtml" />
+@if(Model.IsAdmin)
+{
+
+    <div>Admin/produktägare</div>
+    <div>Du är giltig!</div>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <form method="post" class="col-6" novalidate>
+
+                <div class="mb-3">
+                    <label asp-for="ProductName" class="form-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Price" class="form-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="StarRating" class="form-label"></label>
+                    <input asp-for="StarRating" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Category" class="form-label"></label>
+                    <input asp-for="Category" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Tag" class="form-label"></label>
+                    <input asp-for="Tag" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageUrl" class="form-label"></label>
+                    <input asp-for="ImageUrl" class="form-control" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Register Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+}
+else
+{
+    <div>Unauthorized</div>
+    <div>Du kommer tyvärr inte åt denna sida</div>
+    <div>Försök registrera dig eller logga in</div>
+    <div class="mt-5">
+        <a asp-controller="Register" asp-action="Index">Registrera</a>
+        <a asp-controller="Login" asp-action="Index">Logga in</a>
+    </div>
+}
+
